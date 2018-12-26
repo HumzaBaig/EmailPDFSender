@@ -1,2 +1,3 @@
 class Influencer < ApplicationRecord
+  
 end
