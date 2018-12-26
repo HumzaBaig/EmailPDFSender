@@ -1,3 +1,3 @@
 class Influencer < ApplicationRecord
-  has_many :photo
+  has_many :photos
 end
