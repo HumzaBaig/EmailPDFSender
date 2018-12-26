@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  industry: MyString
+  likes: 1
+  comments: 1
+  influencer_id: 1
+
+two:
+  industry: MyString
+  likes: 1
+  comments: 1
+  influencer_id: 1

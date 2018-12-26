@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  instagram_handle: MyString
+  email: MyString
+  city: MyString
+
+two:
+  instagram_handle: MyString
+  email: MyString
+  city: MyString
