@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InfluencersControllerTest < ActionDispatch::IntegrationTest
+class InfluencerReportTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

@@ -1,2 +1,0 @@
-class InfluencersController < ApplicationController
-end

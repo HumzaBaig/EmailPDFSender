@@ -4,8 +4,14 @@ one:
   instagram_handle: MyString
   email: MyString
   city: MyString
+  post_price_by_category: 9.99
+  post_price_by_category_engagements: 9.99
+  post_price_by_avg_engagements: 9.99
 
 two:
   instagram_handle: MyString
   email: MyString
   city: MyString
+  post_price_by_category: 9.99
+  post_price_by_category_engagements: 9.99
+  post_price_by_avg_engagements: 9.99

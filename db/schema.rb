@@ -10,26 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181226090404) do
+ActiveRecord::Schema.define(version: 20181227081812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "influencers", force: :cascade do |t|
-    t.string   "instagram_handle"
-    t.string   "email"
-    t.string   "city"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+  create_table "influencer_reports", force: :cascade do |t|
+    t.string   "instagram_handle",                                           null: false
+    t.string   "email",                                                      null: false
+    t.string   "city",                                                       null: false
+    t.decimal  "post_price_by_category",             precision: 4, scale: 2, null: false
+    t.decimal  "post_price_by_category_engagements", precision: 4, scale: 2, null: false
+    t.decimal  "post_price_by_avg_engagements",      precision: 4, scale: 2, null: false
+    t.datetime "created_at",                                                 null: false
+    t.datetime "updated_at",                                                 null: false
   end
 
   create_table "photos", force: :cascade do |t|
-    t.string   "industry"
-    t.integer  "likes"
-    t.integer  "comments"
-    t.integer  "influencer_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "industry",             null: false
+    t.integer  "likes",                null: false
+    t.integer  "comments",             null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.integer  "influencerreports_id", null: false
+    t.index ["influencerreports_id"], name: "index_photos_on_influencerreports_id", using: :btree
   end
 
 end
