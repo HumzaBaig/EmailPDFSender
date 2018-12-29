@@ -1,6 +1,6 @@
 class InfluencerReport < ApplicationRecord
   # model assocation
-  has_many :photos
+  has_many :photos, inverse_of: :influencerreport
 
   # validations
   validates_presence_of :instagram_handle,
