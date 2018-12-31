@@ -1,5 +1,4 @@
 class InfluencerReportsController < ApplicationController
-    # before_action :split_params, only: [:create]
 
   def create
     @report = InfluencerReport.create!(influencerreport_params)
