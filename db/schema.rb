@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181227081812) do
+ActiveRecord::Schema.define(version: 20190101073716) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,20 @@ ActiveRecord::Schema.define(version: 20181227081812) do
     t.decimal  "post_price_by_avg_engagements",      precision: 4, scale: 2, null: false
     t.datetime "created_at",                                                 null: false
     t.datetime "updated_at",                                                 null: false
+    t.decimal  "fitness_ppe_method1",                precision: 4, scale: 2
+    t.decimal  "fitness_ppe_method2",                precision: 4, scale: 2
+    t.decimal  "food_ppe_method1",                   precision: 4, scale: 2
+    t.decimal  "food_ppe_method2",                   precision: 4, scale: 2
+    t.decimal  "fashion_ppe_method1",                precision: 4, scale: 2
+    t.decimal  "fashion_ppe_method2",                precision: 4, scale: 2
+    t.decimal  "photography_ppe_method1",            precision: 4, scale: 2
+    t.decimal  "photography_ppe_method2",            precision: 4, scale: 2
+    t.decimal  "kids_family_ppe_method1",            precision: 4, scale: 2
+    t.decimal  "kids_family_ppe_method2",            precision: 4, scale: 2
+    t.decimal  "travel_ppe_method1",                 precision: 4, scale: 2
+    t.decimal  "travel_ppe_method2",                 precision: 4, scale: 2
+    t.decimal  "beauty_ppe_method2",                 precision: 4, scale: 2
+    t.decimal  "beauty_ppe_method1",                 precision: 4, scale: 2
   end
 
   create_table "photos", force: :cascade do |t|
