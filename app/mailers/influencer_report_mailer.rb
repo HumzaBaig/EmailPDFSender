@@ -1,7 +1,10 @@
 class InfluencerReportMailer < ApplicationMailer
   default from: 'Team Datafluencer <datafluencer@gmail.com>'
 
-  def report_email(influencer_report)
+  def report_email(influencer_report, engagementsObj)
+    require 'date'
+
+    @date = DateTime.now
     @influencer_report = influencer_report
     @influencer = @influencer_report.instagram_handle
     @influencer_email = @influencer_report.email

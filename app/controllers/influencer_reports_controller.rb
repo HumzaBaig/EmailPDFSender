@@ -2,6 +2,8 @@ class InfluencerReportsController < ApplicationController
 
   def create
     @report = InfluencerReport.create!(influencerreport_params)
+    # create engagementsObj using method in model
+    # add mailer
     json_response(@report, :created)
   end
 
