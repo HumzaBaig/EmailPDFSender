@@ -1,14 +1,12 @@
 class InfluencerReportMailer < ApplicationMailer
-  default from: 'Team Datafluencer <datafluencer@gmail.com>'
+  default from: 'Baig from Datafluencer <datafluencer@gmail.com>'
 
   def report_email(influencer_report, engagementsObj)
-    require 'date'
-
-    @date = DateTime.now
+    @date = influencer_report.created_at
     @influencer_report = influencer_report
     @influencer = @influencer_report.instagram_handle
     @influencer_email = @influencer_report.email
 
-    mail(to: `#{@influencer} <#{@influencer_email}>`, bcc: 'Team Datafluencer <datafluencer@gmail.com>', subject: 'Your Instagram Report')
+    mail(to: `#{@influencer} <#{@influencer_email}>`, subject: 'Your Instagram Report')
   end
 end
