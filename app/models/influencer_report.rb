@@ -25,10 +25,20 @@ class InfluencerReport < ApplicationRecord
     "Beauty": 0.14
   }
 
-  def total_category_engagements(category)
+  def total_category_likes(category)
     self.photos.reduce(0) do | total, photo |
-      total + (photo.likes + photo.comments) if category == photo.industry
+      total + photo.likes if category == photo.industry
     end
+  end
+
+  def total_category_comments(category)
+    self.photos.reduce(0) do | total, photo |
+      total + photo.comments if category == photo.industry
+    end
+  end
+
+  def total_category_engagements(category)
+    total_category_comments(category) + total_category_likes(category)
   end
 
   def num_of_category_posts(category)
