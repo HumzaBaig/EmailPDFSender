@@ -46,10 +46,6 @@ class InfluencerReport < ApplicationRecord
       total + 1 if category == photo.industry
     end
   end
-
-  def category_method_one_ppe(category)
-    @@avg_cpe[category] * self.total_category_engagements(category) / self.num_of_category_posts(category)
-  end
 end
 
 # TODO: May need to create photos in here using: create_association!(attributes = {})
